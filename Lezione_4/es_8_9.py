@@ -3,4 +3,5 @@ def show_messages(lista1:list):
         print(i)
 
 messaggi:list = ["ciao", "come va?", "chi sei?", "ci sei?"]
-show_messages(messaggi)
+if __name__ == "__main__":
+    show_messages(messaggi)
