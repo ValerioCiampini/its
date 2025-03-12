@@ -11,5 +11,7 @@ if x > 0:
         else:
             if n < x:
                 somma_d += n
-
+else: 
+    print("errore. devi inserire un numero positivo")
+    
 print(somma_d, somma_p)
