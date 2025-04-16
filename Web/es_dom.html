@@ -2,12 +2,47 @@
 <html>
     <head>
         <title>Dom</title>
+        <script>
+            function cognome()
+            {
+                var cognome = document.getElementById('Cognome')
+                if(cognome == "" )
+                {
+                    alert("Errore! Devi inserire un cognome")
+                    return false
+                }
+                return true
+            }
+
+            function nome()
+            {
+                var nome = document.getElementById('Nome')
+                if(nome == "")
+                {
+                    alert("Errore! Devi inserire un nome")
+                    return false
+                }
+                return true
+            }
+
+            function matricola()
+            {
+                var matricola = document.getElementById('Matricola')
+                if(isNaN(matricola))
+                {
+                    alert("Errore! il valore deve essere numerico")
+                    return false
+                }
+                return true
+            }
+            
+        </script>
     </head>
     <body>
-        <form method="post" action="esegui.php">
-            <input type="text" name="Cognome" placeholder="Cognome" maxlength="40"><br/>
-            <input type="text" name="Nome" placeholder="Nome" maxlength="30"><br/>
-            <input type="text" name="Matricola" placeholder="Matricola" maxlength="12"><br/>
+        <form method="post">
+            <input type="text" id="Cognome" placeholder="Cognome" maxlength="40"><br/>
+            <input type="text" id="Nome" placeholder="Nome" maxlength="30"><br/>
+            <input type="text" id="Matricola" placeholder="Matricola" maxlength="12"><br/>
             <select name="Regione">
                 <option value="Lazio">Lazio</option>
                 <option value="Toscana">Toscana</option>
@@ -30,11 +65,11 @@
                 <option value="Valle D'Aosta">Valle D'Aosta</option>
                 <option value="Trntino Alto-Adige">Trentino Alto-Adige</option>
             </select></br>
-            <input type="text" name="Email" placeholder="Email" maxlength="30"><br/>
-            <input type="text" name="Telefono" placeholder="Telefono" maxlength="15"><br/>
+            <input type="text" id="Email" placeholder="Email" maxlength="30"><br/>
+            <input type="text" id="Telefono" placeholder="Telefono" maxlength="15"><br/>
             Richieste Particolari</br><textarea name="Richieste particolari" rows="12" cols="60"></textarea></br>
-            <input type="submit" name="Invio" value="Invio"></br>
-            <input type="button" name="Reset" value="Reset"></br>
+            <input type="submit" id="Invio" value="Invio" onclick="cognome();"></br>
+            <input type="button" id="Reset" value="Reset"></br>
         </form>
         
     </body>
