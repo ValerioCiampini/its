@@ -33,3 +33,6 @@ class Persona:
     
     def getEtà(self) -> str:
         return self.età
+    
+    def speak(self) -> None:
+        print(f"\nmy name is {self.name}!")
