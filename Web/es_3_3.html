@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>es 3_3</title>
+    </head>
+    <body>
+        <div id = "orario"></div>
+        <script>
+            var secondi = 12560
+            var minuti = parseInt((secondi % 3600) / 60)
+            var ore = parseInt(secondi / 3600)
+
+            document.getElementById("orario").innerHTML = "Output: " + (" ore: " + ore) + (" minuti: " + minuti) + (" secondi: " + ((secondi % 3600) % 60))
+        </script>
+    </body>
+</html>

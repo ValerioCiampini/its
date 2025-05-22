@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>variabili</title>
+    </head>
+    <body>
+        <div id = "risultato"></div>
+        <div id = "esito"></div>
+        
+        <script>
+            var nome = prompt("Inserisci il tuo nome: ");
+
+            document.getElementById("risultato").innerHTML = "Ciao " + nome;
+
+            var x = prompt("Inserisci un numero: ");
+            var y = prompt("Inserisci un numero: ");
+
+            var x1 = parseInt(x)
+            var y1 = parseInt(y)
+
+            document.getElementById("esito").innerHTML = "La somma tra x e y è " + (x1 + y1);
+        </script>
+    </body>
+</html>
