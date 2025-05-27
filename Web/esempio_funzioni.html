@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>esempio funzioni</title>
+    </head>
+    <body>
+        <div id = "risultato"></div>
+        <div id = "saluto"></div>
+        <script>
+            function somma(num1 = 0, num2 = 0)
+            {
+                document.getElementById("risultato").innerHTML ="la somma è: " + (num1 + num2);
+            }
+
+            somma(2, 3);
+            
+            function benvenuto(nome = "guest")
+            {
+                return "Welcome " + nome;
+            }
+            
+            let nome = prompt("inserisci il tuo nome: ")
+            document.getElementById("saluto").innerHTML = benvenuto(nome)
+        </script>
+    </body>
+</html>

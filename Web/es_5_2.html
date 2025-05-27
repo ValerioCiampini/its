@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>es 5_2</title>
+    </head>
+    <body>
+        <div id = "compreso"></div>
+        <script>
+            function compreso(x)
+            {
+                if (x >= 1 && x <= 7)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+
+            function settimana(x)
+            {
+                let giorno 
+                switch(x)
+                {
+                    case 1: 
+                        giorno = "lunedi";
+                        break
+                    case 2:
+                        giorno = "martedi";
+                        break
+                    case 3:
+                        giorno = "mecoledi";
+                        break
+                    case 4: 
+                        giorno = "giovedi";
+                        break
+                    case 5:
+                        giorno = "venerdi";
+                        break
+                    case 6: 
+                        giorno = "sabato";
+                        break
+                    case 7: 
+                        giorno = "domenica";
+                        break
+                    default: 
+                        giorno = "peccato non posso indovinare il giorno";
+                        break
+                }
+
+                return giorno
+            }
+
+            let x = prompt("inseridci un numero: ");
+            let xint = parseInt(x)
+            let y = compreso(xint)
+            if(y == true)
+            {
+                document.getElementById("compreso").innerHTML = settimana(xint);
+            }
+            else
+            {
+                document.getElementById("compreso").innerHTML = settimana(xint);
+            }
+        </script>
+    </body>
+</html>
