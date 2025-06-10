@@ -110,3 +110,30 @@ class RealGEZ(float):
             return n
         
         raise ValueError("Il valore non può essere minore di 0")
+    
+class IntGZ(int):
+    def __new__(cls, x:int|float|bool|str):
+        n:int =  super().__new__(x)
+
+        if n > 0:
+            return n
+        
+        raise ValueError("Il valore non può essere minore o uguale a 0")
+    
+class IntGEZ(int):
+    def __new__(cls, x:int|float|bool|str):
+        n:int =  super().__new__(x)
+
+        if n >= 0:
+            return n
+        
+        raise ValueError("Il valore non può essere minore di 0")
+    
+class IntGC(int):
+    def __new__(cls, x:int|float|bool|str):
+        n:int =  super().__new__(x)
+
+        if n >= 1900:
+            return n
+        
+        raise ValueError("Il valore non può essere minore di 1900")
