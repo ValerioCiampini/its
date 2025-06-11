@@ -137,3 +137,12 @@ class IntGC(int):
             return n
         
         raise ValueError("Il valore non può essere minore di 1900")
+    
+class IntG1088(int):
+    def __new__(cls, x:int|float|bool|str):
+        n:int =  super().__new__(x)
+
+        if n >= 1088:
+            return n
+        
+        raise ValueError("Il valore non può essere minore di 1088")
