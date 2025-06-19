@@ -2,6 +2,12 @@ from impiegato import Impiegato
 from progetto import Progetto
 
 class Coinvolto:
+
+    @classmethod
+    def add(cls, impiegato:Impiegato, progetto:Progetto):
+        l = cls._link(impiegato, progetto)
+        impiegato.add_link_coinvolto(l)
+        progetto.add_link_coinvolto(l)
     
     class _link:
         _impiegato:set[Impiegato] #non noto alla nascita
