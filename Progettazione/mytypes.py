@@ -146,3 +146,8 @@ class IntG1088(int):
             return n
         
         raise ValueError("Il valore non può essere minore di 1088")
+    
+class Ruolo(StrEnum):
+    segretario = auto()
+    direttore = auto()
+    progettista = auto()
