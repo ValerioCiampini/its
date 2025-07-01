@@ -49,4 +49,7 @@ class Media:
         return f"Titolo del Film: {self.get_title()}\nVoto Medio: {self.get_media()}\nGiudizio: {self.getRate()}\nTerribile: {self.ratePercentage(1)}%\nBrutto: {self.ratePercentage(2)}%\nNormale: {self.ratePercentage(3)}%\nBello: {self.ratePercentage(4)}%\nGrandioso: {self.ratePercentage(5)}%"
             
         
-        
+class File(Media):
+
+    def __init__(self, title):
+        super().__init__(title)
