@@ -103,3 +103,43 @@ insert into Persona(id, nome, cognome, posizione, stipendio)
 insert into Persona(id, nome, cognome, posizione, stipendio)
     values
 (2, 'Alice', 'Rossi', 'Professore Ordinario', 2000);
+
+insert into Progetto(id, nome, inizio, fine, budget)
+    values
+(3, 'Progetto 1', '2020/06/21', '2021/02/12');
+
+insert into Progetto(id, nome, inizio, fine, budget)
+    values
+(4, 'Progetto 2', '2023/11/10', '2023/12/20');
+
+insert into WP(progetto, id, nome, inizio, fine)
+    values
+(4, 5, 'WP 1', '2019/02/21', '2020/01/30');
+
+insert into WP(progetto, id, nome, inizio, fine)
+    values
+(3, 6, 'WP 2', '2015/04/13', '2022/06/01');
+
+insert into AttivitaProgetto(id, persona, progetto, wp, giorno, tipo, oreDurata)
+    values
+(7, 2, 4, 6, '2023/12/21', 'Altro', 5);
+
+insert into AttivitaProgetto(id, persona, progetto, wp, giorno, tipo, oreDurata)
+    values
+(8, 1, 3, 5, '2020/10/30', 'Ricerca e Sviluppo', 3);
+
+insert into AttivitaNonProgettuale(id, progetto, tipo, giorno, oreDurata)
+    values
+(9, 3, 'Missione', '2020/09/18', 3);
+
+insert into AttivitaNonProgettuale(id, progetto, tipo, giorno, oreDurata)
+    values
+(10, 4, 'Altro', '2023/11/15', 6);
+
+insert into Assenza(id, persona, tipo, giorno)
+    values
+(11, 1, 'Malattia', '2025/09/24');
+
+insert into Assenza(id, persona, tipo, giorno)
+    values
+(12, 2, 'Maternita', '2025/08/11');
