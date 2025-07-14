@@ -5,6 +5,8 @@ import './App.css';
 import {anagrafica} from "./data/dati";
 import Contatore from './Contatore';
 import EsempioUseEffect from './EsempioUseEffect';
+import CleanUp from './CleanUp';
+import Clock from './Clock';
 
 /*function getDate(date)
 {
@@ -52,6 +54,10 @@ function App() {
 
   return(
     <div className='App'>
+       <Clock timezone = "1" country = "Italy"></Clock>
+        <Clock timezone = "-6" country = "USA"></Clock>
+         <Clock timezone = "8" country = "Japan"></Clock>
+      <CleanUp></CleanUp>
       <Contatore></Contatore>
       <EsempioUseEffect></EsempioUseEffect>
       <h1>{nome1}</h1>
