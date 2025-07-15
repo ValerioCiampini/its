@@ -6,7 +6,9 @@ import {anagrafica} from "./data/dati";
 import Contatore from './Contatore';
 import EsempioUseEffect from './EsempioUseEffect';
 import CleanUp from './CleanUp';
-import Clock from './Clock';
+import CambiaNome from './CambiaNome';
+import LoginForm from './LoginForm';
+//import Clock from './Clock';
 
 /*function getDate(date)
 {
@@ -25,7 +27,7 @@ function App() {
     console.log(nome);
     nome = "Mario";
     setNome1(nome);
-    console.log(nome)
+    console.log(nome);
   }
 
   const elimina = (id) => {
@@ -54,9 +56,8 @@ function App() {
 
   return(
     <div className='App'>
-       <Clock timezone = "1" country = "Italy"></Clock>
-        <Clock timezone = "-6" country = "USA"></Clock>
-         <Clock timezone = "8" country = "Japan"></Clock>
+      <LoginForm></LoginForm>
+      <CambiaNome></CambiaNome>
       <CleanUp></CleanUp>
       <Contatore></Contatore>
       <EsempioUseEffect></EsempioUseEffect>

@@ -38,7 +38,8 @@ create table Progetto(
     fine date not null,
     budget Denaro not null,
 
-    primary key(id)
+    primary key(id),
+    check(inizio < fine)
 );
 
 create table WP(
