@@ -16,7 +16,7 @@ create domain PosInteger as integer
 create domain StringaM as varchar(100);
 
 create domain NumeroOre as integer
-    check(value >= 0 and value <= 8)
+    check(value >= 0 and value <= 8);
 
 create domain Denaro as real
     check(value >= 0);
@@ -25,8 +25,8 @@ create table Persona(
     id PosInteger not null,
     nome StringaM not null, 
     cognome StringaM not null,
-    posizione Strutturatonot null,
-    stipendio Denaronot null,
+    posizione Strutturato not null,
+    stipendio Denaro not null,
 
     primary key(id)
 );
