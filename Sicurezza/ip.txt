@@ -1,0 +1,34 @@
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:15:5d:88:39:05 brd ff:ff:ff:ff:ff:ff
+    inet 172.18.239.6/20 brd 172.18.239.255 scope global dynamic noprefixroute eth0
+       valid_lft 59626sec preferred_lft 59626sec
+    inet6 fe80::2950:228d:5f65:12dc/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+3: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 02:42:08:e8:a1:4d brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+4: br-b8213730d99f: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+    link/ether 02:42:0e:fc:ba:4a brd ff:ff:ff:ff:ff:ff
+    inet 172.18.0.1/16 brd 172.18.255.255 scope global br-b8213730d99f
+       valid_lft forever preferred_lft forever
+    inet6 fe80::42:eff:fefc:ba4a/64 scope link 
+       valid_lft forever preferred_lft forever
+6: vethcf30ab6@if5: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-b8213730d99f state UP group default 
+    link/ether 8a:f6:9f:12:fe:6f brd ff:ff:ff:ff:ff:ff link-netnsid 2
+    inet6 fe80::88f6:9fff:fe12:fe6f/64 scope link 
+       valid_lft forever preferred_lft forever
+8: vethd5df9df@if7: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-b8213730d99f state UP group default 
+    link/ether e6:69:1c:04:74:27 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet6 fe80::e469:1cff:fe04:7427/64 scope link 
+       valid_lft forever preferred_lft forever
+10: veth61fc760@if9: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-b8213730d99f state UP group default 
+    link/ether ce:7e:1f:d8:8f:57 brd ff:ff:ff:ff:ff:ff link-netnsid 1
+    inet6 fe80::cc7e:1fff:fed8:8f57/64 scope link 
+       valid_lft forever preferred_lft forever
