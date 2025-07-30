@@ -8,6 +8,7 @@ import EsempioUseEffect from './EsempioUseEffect';
 import CleanUp from './CleanUp';
 import CambiaNome from './CambiaNome';
 import LoginForm from './LoginForm';
+import FetchComponent from './FetchComponent';
 //import Clock from './Clock';
 
 /*function getDate(date)
@@ -56,6 +57,7 @@ function App() {
 
   return(
     <div className='App'>
+      <FetchComponent></FetchComponent>
       <LoginForm></LoginForm>
       <CambiaNome></CambiaNome>
       <CleanUp></CleanUp>
