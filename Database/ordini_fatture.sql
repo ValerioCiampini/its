@@ -45,12 +45,14 @@ create table Direttore(
     unique(cf)
 );
 
-create table Dipartimento(
-    nome Stringa not null,
-    indirizzo Indirizzo not null,
-
-    primary key(nome),
-    unique(nome)
+create table dipartimento (
+	nome stringa primary key,
+	indirizzo indirizzo not null
+	citta integer not null,
+    direttore Codice
+    
+	foreign key (citta) references citta(id),
+    
 );
 
 create table Ordine(
@@ -80,21 +82,24 @@ create table Fornitore(
     unique(partita_iva)
 );
 
-create table Citta(
-    nome Stringa not null,
-
-    primary key(nome)
+create table nazione (
+	nome stringa primary key
 );
 
-create table Regione(
-    nome Stringa not null,
-
-    primary key(nome)
+create table regione (
+	nome stringa not null,
+	nazione stringa not null,
+	primary key (nome, nazione),
+	foreign key (nazione) references nazione(nome)
 );
 
-create table Nazione(
-    nome Stringa not null,
-
-    primary key(nome)
+create table citta (
+	id integer primary key, 
+	nome stringa not null,
+	regione stringa not null,
+	nazione stringa not null,
+	unique (nome, regione, nazione),
+	foreign key (regione, nazione)
+		references regione(nome, nazione)
 );
 
