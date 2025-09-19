@@ -1,4 +1,4 @@
-from persona import Persona
+from Python.Lezione_17.ospedale.persona import Persona
 
 class Dottore(Persona):
 

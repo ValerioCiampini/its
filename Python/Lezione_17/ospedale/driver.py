@@ -1,7 +1,7 @@
-from persona import Persona
-from dottore import Dottore
-from paziente import Paziente
-from fattura import Fattura
+from Python.Lezione_17.ospedale.persona import Persona
+from Python.Lezione_17.ospedale.dottore import Dottore
+from Python.Lezione_17.ospedale.paziente import Paziente
+from Python.Lezione_17.ospedale.fattura import Fattura
 
 doc1:Dottore = Dottore("Totti", "Gol", "Calciatore", 3.6)
 doc2:Dottore = Dottore("Mario", "Rossi", "Fisioterapista", 90)
