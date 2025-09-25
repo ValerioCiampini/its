@@ -14,4 +14,4 @@ print(lista2)
 for i in lista2:
     lista3.append(chr(i ^ 57))
 
-print(lista3)
+print("".join(lista3))
