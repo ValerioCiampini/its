@@ -1,0 +1,115 @@
+Certamente! Ecco un **riassunto completo e organizzato** di tutti i concetti che abbiamo trattato finora:
+
+---
+
+# **1. Hash (crittografia)**
+
+* Funzione che trasforma dati di qualsiasi lunghezza in un **digest** di lunghezza fissa.
+* **Caratteristiche:** deterministica, veloce, irreversibile, resistente alle collisioni, effetto avalanche.
+* **Algoritmi:** MD5, SHA-1 (deprecati), SHA-256, SHA-3, BLAKE2, Argon2.
+* **Usi:** verifica integrità file, password hashing, firme digitali, blockchain.
+
+---
+
+# **2. CPU (Central Processing Unit)**
+
+* Il "cervello" del computer che esegue istruzioni.
+* **Componenti principali:** ALU (calcoli/logica), CU (controllo), registri, cache.
+* **Caratteristiche:** clock speed, core/thread, architettura (x86, ARM).
+* **Ruolo:** esegue operazioni generali, mentre GPU è specializzata in calcoli paralleli.
+
+---
+
+# **3. Sniffing**
+
+* Tecnica per intercettare pacchetti di rete.
+* **Tipi:**
+
+  * Passive → solo ascolto.
+  * Active → modifica traffico (ARP spoofing, DNS spoofing).
+* **Strumenti:** Wireshark, tcpdump, Ettercap.
+* **Difese:** crittografia (HTTPS, VPN), switch sicuri, monitoraggio rete.
+
+---
+
+# **4. ARP (Address Resolution Protocol)**
+
+* Mappa IP → MAC in reti locali.
+* **Funzionamento:** ARP Request (broadcast) → ARP Reply (unicast).
+* **Vulnerabilità:** ARP spoofing/poisoning → sniffing, MITM, DoS.
+* **Contromisure:** static ARP entries, Dynamic ARP Inspection, TLS/HTTPS.
+
+---
+
+# **5. HTTP (HyperText Transfer Protocol)**
+
+* Protocollo per trasferire risorse tra client e server.
+* **Richiesta/risposta:** GET, POST, PUT, DELETE, HEAD, OPTIONS.
+* **Status code:** 2xx successo, 3xx redirect, 4xx errore client, 5xx errore server.
+* **Sicurezza:** HTTPS (HTTP + TLS), CORS per controllare richieste cross-origin.
+* **Evoluzione:** HTTP/1.1 → HTTP/2 (multiplexing) → HTTP/3 (QUIC su UDP).
+
+---
+
+# **6. Autenticazione**
+
+* Processo per verificare l’identità di utenti/dispositivi.
+* **Fattori:**
+
+  1. Qualcosa che sai (password, PIN).
+  2. Qualcosa che hai (token, smart card).
+  3. Qualcosa che sei (biometria).
+  4. Dove sei / comportamento.
+* **Tipi:** password, OTP, MFA, SSO, passwordless, certificati digitali.
+* **Rischi:** phishing, brute force, sniffing se non cifrato.
+
+---
+
+# **7. Token**
+
+* "Gettone digitale" per autenticazione/autorizzazione.
+* **Tipi:** session token, access token (API, OAuth), refresh token, hardware/software token, token blockchain.
+* **JWT (JSON Web Token):** contiene header, payload (claims), signature.
+* **Vantaggi:** evita reinvio credenziali, scadenza limitata, SSO/API friendly.
+* **Rischi:** furto token, non invalidati, scadenze infinite.
+* **Difese:** HTTPS, scadenze brevi, revoca, httpOnly cookie.
+
+---
+
+# **8. Cookie**
+
+* Piccolo file di testo inviato dal server al browser per **mantenere stato**.
+* **Usi:** sessioni, preferenze, tracciamento.
+* **Tipi:** session, persistent, first-party, third-party.
+* **Sicurezza:** HttpOnly, Secure, SameSite, HTTPS.
+* **Cookie vs Token:** cookie → automatico dal browser; token → più flessibile, spesso header `Authorization`.
+
+---
+
+# **9. Crittografia simmetrica e asimmetrica**
+
+### Simmetrica 🔑
+
+* **Una chiave** per cifrare e decifrare.
+* **Vantaggi:** veloce, adatta a grandi quantità di dati.
+* **Svantaggio:** distribuzione sicura della chiave.
+* **Esempi:** AES, ChaCha20.
+
+### Asimmetrica 🔐
+
+* **Coppia di chiavi:** pubblica (cifra/verifica), privata (decifra/firma).
+* **Vantaggi:** non serve condividere segreti iniziali.
+* **Svantaggi:** lenta rispetto alla simmetrica.
+* **Esempi:** RSA, ECC, Diffie-Hellman.
+
+### Combinazione pratica
+
+* Usare crittografia asimmetrica per scambio sicuro chiavi simmetriche.
+* Poi usare simmetrica per cifrare i dati (veloce).
+* Principio dietro TLS/HTTPS.
+
+---
+
+Se vuoi, posso anche creare **un unico schema grafico** che mostra **come tutti questi concetti interagiscono in una rete sicura**: ARP → sniffing → HTTP/HTTPS → autenticazione → token/cookie → cifratura simmetrica/asimmetrica → hash.
+
+Vuoi che faccia questo schema?
