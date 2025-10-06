@@ -40,19 +40,22 @@ create table Direttore(
     cf CodiceFiscale not null,
     anni_servizio PosInteger not null,
     data_nascita date not null,
+    dipartimento Stringa not null,
+    città integer not null,
 
     primary key(cf),
-    unique(cf)
+    foreign key(città) references citta(id)
 );
 
-create table dipartimento (
-	nome stringa primary key,
-	indirizzo indirizzo not null
+create table Dipartimento (
+	nome Stringa primary key,
+	indirizzo Indirizzo not null
 	citta integer not null,
-    direttore Codice
+    direttore CodiceFiscale not null,
+    ordine integer not null,
     
 	foreign key (citta) references citta(id),
-    
+    foreign key (direttore) references Direttore(cf)
 );
 
 create table Ordine(
@@ -61,14 +64,21 @@ create table Ordine(
     aliquota RealBZO not null,
     descrizione StringaM not null,
     id integer not null,
+    dipartimento stringa not null,
+    statoordine integer not null,
+    fornitore Partita_iva not null,
 
-    primary key(id)
+    primary key(id),
+    foreign key(dipartimento) references Dipartimento(nome),
+    foreign key(statoordine) references StatoOrdine(id),
+    foreign key(fornitore) references Fornitore(partita_iva)
 );
 
 create table StatoOrdine(
     nome Stringa not null,
+    id integer not null,
 
-    primary key(nome)
+    primary key(id),
 );
 
 create table Fornitore(
@@ -77,9 +87,12 @@ create table Fornitore(
     indirizzo Indirizzo not null,
     telefono Telefono not null,
     email Email not null,
+    città integer not null,
+    ordine integer not null,
 
     primary key(partita_iva),
-    unique(partita_iva)
+    unique(partita_iva),
+    foreign key(città) references citta(id),
 );
 
 create table nazione (
